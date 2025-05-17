@@ -14,18 +14,17 @@ pnpm dev
 bun dev
 ```
 
-### 4. Set up your Groq API key
+### 4. Set up your API key
 
-You need to set your Groq API key as an environment variable. You can do this by:
+You need to set your API key as an environment variable. You can do this by:
 
 - Creating a `.env` file in the project root:
 
 ```
-
-GROQ_API_KEY==your_api_key_here
-or
-HF_API_TOKEN==your_api_token_here
-
+HF_API_TOKEN=your_api_token_here
+# or
+GROQ_API_KEY=your_api_key_here
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

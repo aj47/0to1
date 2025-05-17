@@ -52,7 +52,7 @@ function ResultsContent() {
               }`}
             >
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300 ">
-                Chaos Coder
+                0to1
               </span>
             </motion.h1>
             <div className="flex items-center gap-4">

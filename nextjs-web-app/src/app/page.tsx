@@ -10,7 +10,6 @@ import {
   FaTasks,
   FaBlog,
   FaUserTie,
-  FaCalendarAlt,
   FaStore,
   FaRobot,
   FaQuestionCircle,
@@ -19,7 +18,6 @@ import {
 // Signup Modal Component
 export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
   const { theme } = useTheme();
-  const router = useRouter();
   
   if (!isOpen) return null;
   
@@ -34,13 +32,13 @@ export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
         initial={{ scale: 0.9, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         className={`relative w-full max-w-md p-6 rounded-xl shadow-2xl ${
-          theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white text-gray-900'
+          theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
         }`}
       >
         <button 
           onClick={onClose}
           className={`absolute top-4 right-4 p-1 rounded-full ${
-            theme === 'dark' ? 'hover:bg-gray-800' : 'hover:bg-gray-100'
+            theme === "dark" ? "hover:bg-gray-800" : "hover:bg-gray-100"
           }`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -58,9 +56,9 @@ export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
             target="_blank"
             rel="noopener noreferrer"
             className={`w-full py-2 px-4 rounded-lg font-medium text-center block ${
-              theme === 'dark' 
-                ? 'bg-indigo-600 hover:bg-indigo-700 text-white' 
-                : 'bg-indigo-500 hover:bg-indigo-600 text-white'
+              theme === "dark" 
+                ? "bg-indigo-600 hover:bg-indigo-700 text-white" 
+                : "bg-indigo-500 hover:bg-indigo-600 text-white"
             }`}
           >
             Sign Up
@@ -68,9 +66,9 @@ export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
           <button 
             onClick={onClose}
             className={`w-full py-2 px-4 rounded-lg font-medium ${
-              theme === 'dark'
-                ? 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-                : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+              theme === "dark"
+                ? "bg-gray-800 hover:bg-gray-700 text-gray-300"
+                : "bg-gray-200 hover:bg-gray-300 text-gray-700"
             }`}
           >
             Maybe Later
@@ -83,6 +81,7 @@ export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
 
 export default function Home() {
   const [prompt, setPrompt] = useState("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
   const examples = [
@@ -188,7 +187,7 @@ export default function Home() {
         />
       )}
       <div className="relative z-10">
-        <HeroGeometric badge="" title1="Chaos Coder" title2="9x Dev">
+        <HeroGeometric badge="" title1="0to1" title2="Vibe Startup">
           <div className="w-full max-w-3xl mx-auto">
             <div className="relative bg-[#1a1f2e]/80 backdrop-blur-xl rounded-2xl overflow-hidden border border-[#2a3040] shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]">
               <div className="relative p-6 z-10">
@@ -232,12 +231,12 @@ export default function Home() {
                 <div className="mt-4 text-center text-sm text-gray-400">
                   <p>This is an early preview. Open source at{" "}
                     <a 
-                      href="https://github.com/aj47/chaos-coder" 
+                      href="https://github.com/aj47/0to1" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 underline"
                     >
-                      github.com/aj47/chaos-coder
+                      github.com/aj47/0to1
                     </a>
                   </p>
                 </div>
