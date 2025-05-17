@@ -1,18 +1,18 @@
-# Chaos Coder
+# 0to1
 
 <div align="center">
-  <img src="./demo.gif" alt="Chaos Coder Demo" width="640">
+  <img src="./demo.gif" alt="0to1 Demo" width="640">
 </div>
 
 ## Overview
 
-Chaos Coder is a Next.js application that generates five variations of web applications simultaneously using AI. This tool helps developers quickly explore different implementation possibilities for their web application ideas.
+0to1 is a Next.js application that generates five variations of web applications simultaneously using AI. This tool helps developers quickly explore different implementation possibilities for their web application ideas.
 
 **Note:** All the code for this project is located in the `nextjs-web-app` folder.
 
 ## Purpose
 
-The purpose of Chaos Coder is to accelerate the development process by providing multiple variations of code solutions for web applications. By generating five different approaches at once, developers can compare and choose the best implementation for their specific needs.
+The purpose of 0to1 is to accelerate the development process by providing multiple variations of code solutions for web applications. By generating five different approaches at once, developers can compare and choose the best implementation for their specific needs.
 
 ## Features
 
@@ -36,8 +36,8 @@ The purpose of Chaos Coder is to accelerate the development process by providing
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/aj47/chaos-coder.git
-cd chaos-coder/nextjs-web-app
+git clone https://github.com/aj47/0to1.git
+cd 0to1/nextjs-web-app
 ```
 
 ### 2. Install dependencies
@@ -96,7 +96,7 @@ For best results, be as specific as possible when describing your application re
 
 ## Demo
 
-Check out the demo GIF at the top of this README to see Chaos Coder in action.
+Check out the demo GIF at the top of this README to see 0to1 in action.
 
 ## Community
 

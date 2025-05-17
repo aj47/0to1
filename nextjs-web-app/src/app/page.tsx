@@ -6,14 +6,6 @@ import { motion } from "framer-motion";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { useTheme } from "@/context/ThemeContext";
-import {
-  FaTasks,
-  FaBlog,
-  FaUserTie,
-  FaStore,
-  FaRobot,
-  FaQuestionCircle,
-} from "react-icons/fa";
 
 // Signup Modal Component
 export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
@@ -48,7 +40,7 @@ export function SignupModal({ isOpen, onClose }: { isOpen: boolean; onClose: () 
         </button>
         
         <h2 className="text-xl font-bold mb-4">Free Limit Reached</h2>
-        <p className="mb-6">You've reached the limit of 25 free generations. Create an account to continue using our service.</p>
+        <p className="mb-6">You&apos;ve reached the limit of 25 free generations. Create an account to continue using our service.</p>
         
         <div className="flex flex-col gap-4">
           <a 
@@ -84,50 +76,6 @@ export default function Home() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
-  const examples = [
-    {
-      prompt:
-        "A web app for creating a simple to-do list without user authentication",
-      icon: <FaTasks className="w-4 h-4" />,
-      label: "Simple To-Do List",
-    },
-    {
-      prompt:
-        "A web app for creating a simple blog with a list of posts, without user authentication",
-      icon: <FaBlog className="w-4 h-4" />,
-      label: "Simple Blog",
-    },
-    {
-      prompt:
-        "A web app for creating a simple portfolio with a list of projects, without user authentication",
-      icon: <FaUserTie className="w-4 h-4" />,
-      label: "Simple Portfolio",
-    },
-    {
-      prompt:
-        "A web app for displaying a hardware diagram from a given .asc file, context:",
-      icon: <FaRobot className="w-4 h-4" />,
-      label: "Hardware Diagram",
-    },
-    {
-      prompt:
-        "A web app for generating a simple website for a small business, with a homepage, about page, and contact page, without user authentication",
-      icon: <FaStore className="w-4 h-4" />,
-      label: "Simple Website for Small Business",
-    },
-    {
-      prompt:
-        "A web app for creating a simple chatbot that can answer basic questions about a company's products and services, without user authentication",
-      icon: <FaRobot className="w-4 h-4" />,
-      label: "Simple Chatbot",
-    },
-    {
-      prompt:
-        "A web app for creating a simple quiz or trivia game with multiple choice questions and scoring, without user authentication",
-      icon: <FaQuestionCircle className="w-4 h-4" />,
-      label: "Simple Quiz or Trivia Game",
-    },
-  ];
   const [isLoading, setIsLoading] = useState(false);
 
   const [showSignupModal, setShowSignupModal] = useState(false);
@@ -194,28 +142,13 @@ export default function Home() {
                 <textarea
                   value={prompt}
                   onChange={(e) => setPrompt(e.target.value)}
-                  placeholder="E.g., A to-do list app with local storage and dark mode"
+                  placeholder="E.g., A startup that helps people find local events."
                   className="w-full h-32 p-4 bg-[#1a1f2e]/50 font-sans text-base
                          border border-[#2a3040] rounded-xl mb-4 
                          focus:ring-2 focus:ring-[#3b82f6]/50 focus:border-transparent resize-none
                          placeholder:text-gray-400/70
                          text-gray-200"
                 />
-
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {examples.map((example, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setPrompt(example.prompt)}
-                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg
-                             bg-[#1a1f2e]/50 border border-[#2a3040] text-sm text-gray-300
-                             hover:border-[#3b82f6]/50 transition-colors"
-                    >
-                      {example.icon}
-                      {example.label}
-                    </button>
-                  ))}
-                </div>
 
                 <RainbowButton
                   onClick={handleSubmit}
@@ -225,18 +158,17 @@ export default function Home() {
                   {isLoading ? (
                     <div className="w-5 h-5 border-2 border-indigo-400/30 border-t-indigo-400 rounded-full animate-spin" />
                   ) : null}
-                  Generate Web Apps {!isLoading && <>+</>}
+                  Launch Startup!
                 </RainbowButton>
                 
                 <div className="mt-4 text-center text-sm text-gray-400">
-                  <p>This is an early preview. Open source at{" "}
+                  <p>
                     <a 
-                      href="https://github.com/aj47/0to1" 
+                      href="https://discord.gg/cK9WeQ7jPq" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="text-blue-400 hover:text-blue-300 underline"
                     >
-                      github.com/aj47/0to1
                     </a>
                   </p>
                 </div>
